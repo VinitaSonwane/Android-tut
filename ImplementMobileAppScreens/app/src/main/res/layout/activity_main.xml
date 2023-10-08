@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Form Buttons -->
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginTop="4dp"
+        android:background="?attr/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:src="@drawable/baseline_menu_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="DuplicateSpeakableTextCheck,TouchTargetSizeCheck"
+            android:contentDescription="TODO" />
+
+        <!-- Add a horizontal ConstraintLayout to hold the navigation icon and title -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Navigation icon at the right end -->
+            <ImageButton
+                android:id="@+id/btnRefine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/refine_svg"
+                android:background="?attr/selectableItemBackground"
+                android:contentDescription="Refine"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <!-- Title in the center -->
+            <TextView
+                android:id="@+id/toolbarTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Howdy Vinita Sonwane !!"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/btnRefine"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+
+
+
+    <Button
+        android:id="@+id/btnPersonal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Personal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnBusiness"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"/>
+
+    <Button
+        android:id="@+id/btnBusiness"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Business"
+        app:layout_constraintStart_toEndOf="@id/btnPersonal"
+        app:layout_constraintEnd_toStartOf="@id/btnMerchant"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"/>
+
+    <Button
+        android:id="@+id/btnMerchant"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Merchant"
+        app:layout_constraintStart_toEndOf="@id/btnBusiness"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"/>
+
+
+
+
+    <!-- Bottom Navigation -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:elevation="8dp"
+        android:padding="8dp">
+
+        <ImageButton
+            android:id="@+id/btnExplore"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="Explore"
+            android:src="@drawable/baseline_explore_24"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <ImageButton
+            android:id="@+id/btnNetwork"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="Network"
+            android:src="@drawable/baseline_network_ping_24"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <ImageButton
+            android:id="@+id/btnChat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="Chat"
+            android:src="@drawable/baseline_chat_24"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <ImageButton
+            android:id="@+id/btnContacts"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="Contacts"
+            android:src="@drawable/baseline_contacts_24"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <ImageButton
+            android:id="@+id/btnGroups"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="Groups"
+            android:src="@drawable/baseline_groups_3_24"
+            tools:ignore="TouchTargetSizeCheck" />
+    </LinearLayout>
+
+    <com.google.android.material.search.SearchBar
+        android:id="@+id/searchBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+
+        app:layout_constraintBottom_toTopOf="@id/btnExplore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnMerchant"
+        tools:ignore="NotSibling" />
+
+    <ImageButton
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:src="@drawable/baseline_menu_24"
+        app:layout_constraintBottom_toBottomOf="@id/searchBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/searchBar"
+        tools:ignore="TouchTargetSizeCheck" />
+
+
+    <ImageButton
+        android:id="@+id/btnHamburger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:contentDescription="Hamburger Menu"
+        android:src="@drawable/baseline_menu_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/contactCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/searchBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnExplore"
+        android:layout_marginTop="16dp"
+        tools:ignore="NotSibling">
+
+
+
+        <!-- Contact Card Content -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            tools:ignore="ExtraText">
+
+            <!-- Contact Name -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chaitanya Mate"
+                android:textSize="18sp"
+                android:textColor="@android:color/black"/>
+
+            <!-- Contact Phone Number -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="123-456-7890"
+                android:textSize="24sp"
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginBottom="16dp"/>/>
+
+            <!-- Add more contact details or design as needed -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vinita Sonwane"
+                android:textSize="18sp"
+                android:textColor="@android:color/black"/>
+
+            <!-- Contact Phone Number -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="123-456-7890"
+                android:textSize="24sp"
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginBottom="16dp"/>/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nachiket Jagtap"
+                android:textSize="18sp"
+                android:textColor="@android:color/black"/>
+
+            <!-- Contact Phone Number -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="123-456-7890"
+                android:textSize="24sp"
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginBottom="16dp"/>/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shubhra Nakod"
+                android:textSize="18sp"
+                android:textColor="@android:color/black"/>
+
+            <!-- Contact Phone Number -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="123-456-7890"
+                android:textSize="24sp"
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginBottom="16dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Diksha Jagdale"
+                android:textSize="18sp"
+                android:textColor="@android:color/black"/>
+
+            <!-- Contact Phone Number -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="123-456-7890"
+                android:textSize="24sp"
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginBottom="16dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tushar Thorat"
+                android:textSize="18sp"
+                android:textColor="@android:color/black"/>
+
+            <!-- Contact Phone Number -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="123-456-7890"
+                android:textSize="24sp"
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginBottom="16dp"/>
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
